@@ -84,7 +84,9 @@ CloudWatch.prototype.createBatch = function() {
       batch.push(this.logEvents.shift());
     }
   }
-  console.log('I will send a batch of ' + sizeof(batch) + ' bytes');
+  if (this.options.verbose) {
+    console.log([new Date(), ' ', sizeof(batch), 'b', ' ', this.logEvents.length].join(''));
+  }
   return batch;
 };
 
