@@ -1,6 +1,7 @@
 var util = require('util'),
     winston = require('winston'),
     AWS = require('aws-sdk'),
+    sizeof = require('object-sizeof'),
     _ = require('lodash');
 
 var CloudWatch = winston.transports.CloudWatch = function(options) {
@@ -65,12 +66,26 @@ CloudWatch.prototype.upload = function() {
       sequenceToken: sequenceToken,
       logGroupName: this.options.logGroupName,
       logStreamName: this.options.logStreamName,
-      logEvents: this.logEvents.splice(0, 20)
+      logEvents: this.createBatch()
     };
     this.cloudwatchlogs.putLogEvents(payload, function(err, data) {
       if (err) return console.log(err, err.stack);
     });
   }.bind(this));
+};
+
+// AWS enforces a limit of 32kb batch size per request
+CloudWatch.prototype.createBatch = function() {
+  var batch = [];
+  while(this.logEvents.length) {
+    var item = this.logEvents[0];
+    var newsize = sizeof(item) + sizeof(batch);
+    if (newsize < 32000) {
+      batch.push(this.logEvents.shift());
+    }
+  }
+  console.log('I will send a batch of ' + sizeof(batch) + ' bytes');
+  return batch;
 };
 
 module.exports = CloudWatch;

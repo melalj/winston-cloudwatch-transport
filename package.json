@@ -21,6 +21,7 @@
     "async": "^0.9.0",
     "aws-sdk": "^2.1.8",
     "lodash": "^3.0.1",
+    "object-sizeof": "^1.0.3",
     "winston": "^0.9.0"
   },
   "devDependencies": {
