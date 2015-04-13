@@ -76,12 +76,14 @@ CloudWatch.prototype.upload = function() {
 
 // AWS enforces a limit of 32kb batch size per request
 CloudWatch.prototype.createBatch = function() {
-  var batch = [];
-  while(this.logEvents.length) {
+  var batch = [], batchSize = 0;
+  while(this.logEvents.length > 0) {
     var item = this.logEvents[0];
-    var newsize = sizeof(item) + sizeof(batch);
-    if (newsize < 32000) {
+    batchSize += sizeof(item);
+    if (batchSize < 32000) {
       batch.push(this.logEvents.shift());
+    } else {
+      break;
     }
   }
   if (this.options.verbose) {
