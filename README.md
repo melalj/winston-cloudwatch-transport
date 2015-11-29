@@ -1,6 +1,11 @@
 # winston-cloudwatch-transport <br />
 
-Send logs to Amazon Cloudwatch using Winston.
+
+[winston-cloudwatch]:
+<https://github.com/lazywithclass/winston-cloudwatch>
+This is a rewrite/modification of 
+[winston-cloudwatch].  This module allows for multiple instances of the cloudwatch transport to be used with Winston.  
+Allowing you to leverage winston categories for logging to multiple CloudWatch Log Groups/Streams.
 
 ## Installation
 
