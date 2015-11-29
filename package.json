@@ -1,35 +1,25 @@
 {
-  "name": "winston-cloudwatch",
-  "version": "0.6.1",
+  "name": "winston-cloudwatch-transport",
+  "version": "1.0.0",
   "description": "Send logs to Amazon Cloudwatch using Winston.",
   "keywords": [
     "amazon",
+    "aws",
     "cloudwatch",
     "winston",
     "logging",
     "log"
   ],
-  "main": "index.js",
-  "scripts": {
-    "test": "make test",
-    "dev": "make -s"
-  },
-  "repository": "https://github.com/lazywithclass/winston-cloudwatch",
-  "author": "me@lazywithclass.com",
+  "main": "./lib/winston-cloudwatch-transport.js",
+  "repository": "https://github.com/npaone/winston-cloudwatch-transport",
+  "author": "me@nicholaspanone.com",
   "license": "MIT",
   "peerDependencies": {
-    "winston": "^1.0.0"
+    "winston": "^2.1.1"
   },
   "dependencies": {
-    "aws-sdk": "^2.1.8",
-    "lodash": "^3.0.1"
-  },
-  "devDependencies": {
-    "clarify": "^1.0.5",
-    "coffee-script": "^1.7.1",
-    "mocha": "^2.3.3",
-    "should": "^7.1.0",
-    "sinon": "^1.12.1",
-    "testem": "^0.9.5"
+    "aws-sdk": "~2.2.5",
+    "lodash": "~3.10.1",
+    "cycle": "^1.0.3"
   }
 }
