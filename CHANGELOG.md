@@ -1,3 +1,8 @@
+### 1.0.1
+
+* Dropped cycle
+* Added circular-json 
+
 ### 1.0.0
 
 * Rewrite to support multiple cloudwatch transports inside single winston instance

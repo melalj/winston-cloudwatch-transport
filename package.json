@@ -1,6 +1,6 @@
 {
   "name": "winston-cloudwatch-transport",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Send logs to Amazon Cloudwatch using Winston.",
   "keywords": [
     "amazon",
@@ -20,6 +20,6 @@
   "dependencies": {
     "aws-sdk": "~2.2.5",
     "lodash": "~3.10.1",
-    "cycle": "^1.0.3"
+    "circular-json": "^0.3.0"
   }
 }
