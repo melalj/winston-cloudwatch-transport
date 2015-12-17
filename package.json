@@ -20,6 +20,5 @@
     "lodash": "~3.10.1",
     "circular-json": "^0.3.0",
     "backoff": "^2.4.1",
-    "async": "^1.5.0"
   }
 }

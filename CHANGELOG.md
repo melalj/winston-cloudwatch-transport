@@ -1,6 +1,7 @@
 ### 1.0.5
 
 * Suppressing OperationAborted error, no need to dump it.  We're able to retry the request
+* Removing async, it was unused.
 
 ### 1.0.4
 
