@@ -1,3 +1,11 @@
+### 1.0.5
+
+* Suppressing OperationAborted error, no need to dump it.  We're able to retry the request
+
+### 1.0.4
+
+* Replaced testing limits with actual values.
+
 ### 1.0.3
 
 * Corrected package.json error
