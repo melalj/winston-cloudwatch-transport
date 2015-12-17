@@ -1,3 +1,11 @@
+### 1.0.3
+
+* Corrected package.json error
+* Rewrote sending logic
+    *  Now based off size of payload vs number of items
+    *  Retries on failures using backoff with jitter.
+    *  Put an upper limit on the maximum amount of payloads so that if the queue builds up it won't compromise application integrity
+       
 ### 1.0.2
 
 * Dropped cycle

@@ -1,7 +1,7 @@
 {
   "name": "winston-cloudwatch-transport",
-  "version": "1.0.2",
-  "description": "Send logs to Amazon Cloudwatch using Winston.",
+  "version": "1.0.3",
+  "description": "A winston transport for Amazon Cloudwatch.",
   "keywords": [
     "amazon",
     "aws",
@@ -11,15 +11,15 @@
     "log"
   ],
   "main": "./lib/winston-cloudwatch-transport.js",
-  "repository": "https://github.com/npaone/winston-cloudwatch-transport",
+  "repository": "https://github.com/npanone/winston-cloudwatch-transport",
   "author": "me@nicholaspanone.com",
   "license": "MIT",
-  "peerDependencies": {
-    "winston": "^2.1.1"
-  },
   "dependencies": {
+    "winston": "^2.1.1",
     "aws-sdk": "~2.2.5",
     "lodash": "~3.10.1",
-    "circular-json": "^0.3.0"
+    "circular-json": "^0.3.0",
+    "backoff": "^2.4.1",
+    "async": "^1.5.0"
   }
 }
