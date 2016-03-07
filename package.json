@@ -1,6 +1,6 @@
 {
-  "name": "winston-cloudwatch-transport",
-  "version": "1.0.6",
+  "name": "winston-cloudwatch-transport-2",
+  "version": "2.0.0",
   "description": "A winston transport for Amazon Cloudwatch.",
   "keywords": [
     "amazon",
@@ -11,7 +11,7 @@
     "log"
   ],
   "main": "./lib/winston-cloudwatch-transport.js",
-  "repository": "https://github.com/npanone/winston-cloudwatch-transport",
+  "repository": "https://github.com/melalj/winston-cloudwatch-transport",
   "author": "me@nicholaspanone.com",
   "license": "MIT",
   "dependencies": {
