@@ -3,7 +3,7 @@
 
 [winston-cloudwatch]:
 <https://github.com/lazywithclass/winston-cloudwatch>
-This is a rewrite/modification of 
+This is a rewrite/modification of
 [winston-cloudwatch].  This module allows for multiple instances of the cloudwatch transport to be used with Winston.  
 Allowing you to leverage winston categories for logging to multiple CloudWatch Log Groups/Streams.
 
@@ -21,7 +21,7 @@ AWS configuration works using `~/.aws/credentials` as written in [AWS JavaScript
 
 ### By Environment Variables
 
-``` 
+```
 AWS_ACCESS_KEY_ID = <Your AWS Access key>
 AWS_SECRET_KEY = <Your AWS Secret Key>
 AWS_REGION = <Region containing your CloudWatch Log Group>
@@ -31,12 +31,13 @@ AWS_REGION = <Region containing your CloudWatch Log Group>
 
 ### Options
  * logGroupName
- * logStreamName 
+ * logStreamName
  * name - _Optional_ Defaults to "cloudwatch" + logGroupName + logStreamName
  * level - _Optional_ Defaults to debug
  * awsAccessKeyId - _Optional if provided by environment variable AWS_ACCESS_KEY_ID or ~/.aws/credentials/_
  * awsSecretKey - _Optional if provided by environment variable AWS_SECRET_KEY or ~/.aws/credentials/_
  * awsRegion - _Optional if provided by environment variable AWS_REGION_
+ * jsonMessage - _Optional_ Defaults to true
 
 #### Example
 ``` js
