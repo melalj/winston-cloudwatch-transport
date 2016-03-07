@@ -42,9 +42,10 @@ AWS_REGION = <Region containing your CloudWatch Log Group>
 #### Example
 ``` js
 var winston = require('winston');
+var WinstonTransport = require('winston-cloudwatch-transport');
 
-winston.transports.<Transport Name> = new require('winston-cloudwatch-transport', {
-    logGroupName: <Log Group Name>,
-    logStreamName: <Log Stream Name>
+winston.transports.YourCustomTransport = new WinstonTransport({
+    logGroupName: 'Log Group Name',
+    logStreamName: 'Log Stream Name'
 });
 ```
